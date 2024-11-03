@@ -22,7 +22,7 @@ Este es un sistema web para la administración de inventario desarrollado con Ja
 
 1. Clonar el repositorio:
    ```bash
-   
+   git clone https://github.com/Rethory/Castores.git
 
 2. Crear la base de datos:
 
