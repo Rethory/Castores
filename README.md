@@ -46,11 +46,13 @@ File -> Open -> Seleccionar la carpeta del proyecto
 Click en Finish
 
 5. Ejecutar la aplicación:
-
+```bash
 mvn clean package
+```
 y posteriormente
+```bash
 mvn spring-boot:run
-
+```
 6. Acceder a la aplicación:
 
 Abrir navegador web
