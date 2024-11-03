@@ -52,38 +52,12 @@ mvn spring-boot:run
 Abrir navegador web
 Ir a http://localhost:8080
 
-Credenciales por Defecto
-Administrador:
-Usuario: admin@empresa.com
-Contraseña: admin123
-Almacenista:
-Usuario: almacen@empresa.com
-Contraseña: almacen123
+## Credenciales por Defecto
+- Administrador:
+- Usuario: admin@empresa.com
+- Contraseña: admin123
+- Almacenista:
+- Usuario: almacen@empresa.com
+- Contraseña: almacen123
 
-/inventario-app
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/empresa/
-│   │   │       ├── config/
-│   │   │       ├── controllers/
-│   │   │       ├── models/
-│   │   │       ├── repositories/
-│   │   │       └── services/
-│   │   ├── resources/
-│   │   │   └── scripts/
-│   │   └── webapp/
-│   │       └── WEB-INF/
-│   │           └── views/
-└── pom.xml
 
-Funcionalidades
-Administrador
-Ver inventario
-Agregar productos
-Aumentar inventario
-Dar de baja/reactivar productos
-Ver histórico de movimientos
-Almacenista
-Ver inventario
-Registrar salidas de productos
