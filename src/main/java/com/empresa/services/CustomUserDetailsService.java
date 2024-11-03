@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import com.empresa.dao.UsuarioDAO;
 import com.empresa.models.Usuario;
+
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,26 +22,26 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = usuarioDAO.findByEmail(username);
+        Usuario usuario = usuarioDAO.obtenerUsuarioPorCorreo(username);
         
-        if (usuario == null) {
-            throw new UsernameNotFoundException("Usuario no encontrado");
+         if (usuario == null) {
+        System.out.println("Usuario no encontrado: " + username);
+        throw new UsernameNotFoundException("Usuario no encontrado: " + username);
+        }
+    
+        if (usuario.getContraseña() == null || usuario.getContraseña().isEmpty()) {
+        System.out.println("Contraseña vacía para usuario: " + username);
+        throw new UsernameNotFoundException("Credenciales inválidas para: " + username);
         }
 
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        
-        if (usuario.getIdRol() == 1) {
-            authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-        } else if (usuario.getIdRol() == 2) {
-            authorities.add(new SimpleGrantedAuthority("ROLE_ALMACENISTA"));
-        }
 
-        return new User(usuario.getCorreo(), 
-                       usuario.getContraseña(), 
-                       true, 
-                       true, 
-                       true, 
-                       true, 
-                       authorities);
+        String rol = usuario.getIdRol() == 1 ? "ROLE_ADMIN" : "ROLE_ALMACENISTA";
+        System.out.println("Usuario encontrado: " + username + " con rol: " + rol);
+
+        return User.builder()
+                .username(usuario.getCorreo())
+                .password(usuario.getContraseña())
+                .authorities(Collections.singleton(new SimpleGrantedAuthority(rol)))
+                .build();
     }
 }

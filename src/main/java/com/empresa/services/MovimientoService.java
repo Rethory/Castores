@@ -13,6 +13,10 @@ public class MovimientoService {
     @Autowired
     private MovimientoDAO movimientoDAO;
     
+    public void guardarMovimiento(Movimiento movimiento) {
+        movimientoDAO.guardarMovimiento(movimiento);
+    }
+    
     public List<Movimiento> obtenerTodosLosMovimientos() {
         return movimientoDAO.obtenerTodosLosMovimientos();
     }

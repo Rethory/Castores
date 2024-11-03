@@ -105,13 +105,19 @@
                     cantidad: -cantidad // Negativo para indicar salida
                 }),
                 success: function() {
-                    location.reload();
-                },
-                error: function(xhr) {
-                    alert('Error: ' + xhr.responseJSON.error);
-                }
-            });
+                alert('Salida registrada correctamente');
+                $('#modalSalida').modal('hide');
+                location.reload();
+        },
+            error: function(xhr) {
+            let mensaje = 'Error al procesar la solicitud';
+            if (xhr.responseJSON && xhr.responseJSON.error) {
+                mensaje = xhr.responseJSON.error;
+            }
+            alert(mensaje);
         }
+    });
+}
     </script>
 </body>
 </html>
