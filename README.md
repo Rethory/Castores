@@ -40,7 +40,7 @@ Ejecutar los scripts en el siguiente orden:
 Abrir /src/main/resources/application.properties
 Modificar las credenciales de MySQL según tu configuración
 
-4. Importar el proyecto en el IDE preferido:
+4. Importar el proyecto en el IDE preferido(Si decidiste descargar como zip el proyecto y no con clonación de github):
 
 File -> Open -> Seleccionar la carpeta del proyecto
 Click en Finish
