@@ -2,6 +2,10 @@
 
 Este es un sistema web para la administración de inventario desarrollado con Java Spring Boot.
 
+## Las partes escritas del test y el diagrama entidad relación se encuentran en la siguiente ruta: 
+- src\main\resources\Entidad Relacion db.png
+- src\main\resources\test de conocimiento.txt
+- 
 ## Tecnologías Utilizadas
 
 - **IDE:** IntelliJ IDEA (4.29.0)
