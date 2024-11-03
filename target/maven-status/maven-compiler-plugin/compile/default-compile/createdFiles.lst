@@ -1,0 +1,16 @@
+com\empresa\controllers\SalidasController.class
+com\empresa\dao\ProductoDAO.class
+com\empresa\models\Usuario.class
+com\empresa\dao\UsuarioDAO.class
+com\empresa\services\CustomUserDetailsService.class
+com\empresa\services\MovimientoService.class
+com\empresa\config\WebConfig.class
+com\empresa\models\Producto.class
+com\empresa\controllers\UsuarioController.class
+com\empresa\controllers\MovimientoController.class
+com\empresa\controllers\InventarioController.class
+com\empresa\dao\MovimientoDAO.class
+com\empresa\InventarioApplication.class
+com\empresa\services\ProductoService.class
+com\empresa\config\SecurityConfig.class
+com\empresa\models\Movimiento.class
